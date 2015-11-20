@@ -16,19 +16,15 @@ namespace MathHelper
 				//int fact, summ, maxEvenNumber;
 				//CalculateFactorialAndSummAndMaxEventNumber( number, out fact, out summ, out maxEvenNumber );
 
-				int fact = GetFactorial( number );
-				int summ = GetSummFrom1ToN( number );
-				int maxEvenNumber = GetMaxEvenNumber( number );
-
-				// Выводим результаты на консоль
-				Console.WriteLine( "Факториал равен " + fact );
-				Console.WriteLine( "Сумма от 1 до N равна " + summ );
-				Console.WriteLine( "Максимальное четное число меньше N равно " + maxEvenNumber );
+				GetFactorialAndOutput( number );
+				GetSummFrom1ToNAndOutput( number );
+				GetMaxEvenNumberAndOutput( number );
+				
 				Console.ReadLine();
 			}
 		}
 
-		private static int GetMaxEvenNumber( int number )
+		private static void GetMaxEvenNumberAndOutput( int number )
 		{
 			int maxEvenNumber = 0;
 
@@ -39,10 +35,10 @@ namespace MathHelper
 					maxEvenNumber = i;
 				}
 			}
-			return maxEvenNumber;
+			Console.WriteLine( "Максимальное четное число меньше N равно " + maxEvenNumber );
 		}
 
-		private static int GetSummFrom1ToN( int number )
+		private static void GetSummFrom1ToNAndOutput( int number )
 		{
 			int summ = 0;
 
@@ -50,17 +46,17 @@ namespace MathHelper
 			{
 				summ = summ + i;
 			}
-			return summ;
+			Console.WriteLine( "Сумма от 1 до N равна " + summ );
 		}
 
-		private static int GetFactorial( int number )
+		private static void GetFactorialAndOutput( int number )
 		{
 			int fact = 1;
 			for ( int i = 1; i <= number; i++ )
 			{
 				fact = fact * i;
 			}
-			return fact;
+			Console.WriteLine( "Факториал равен " + fact );
 		}
 
 		private static void CalculateFactorialAndSummAndMaxEventNumber( int number, out int fact, out int summ, out int maxEvenNumber )

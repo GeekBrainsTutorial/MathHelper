@@ -13,8 +13,12 @@ namespace MathHelper
 			int number;
 			if ( TryGetNumberFromUser( out number ) )
 			{
-				int fact, summ, maxEvenNumber;
-				CalculateFactorialAndSummAndMaxEventNumber( number, out fact, out summ, out maxEvenNumber );
+				//int fact, summ, maxEvenNumber;
+				//CalculateFactorialAndSummAndMaxEventNumber( number, out fact, out summ, out maxEvenNumber );
+
+				int fact = GetFactorial( number );
+				int summ = GetSummFrom1ToN( number );
+				int maxEvenNumber = GetMaxEvenNumber( number );
 
 				// Выводим результаты на консоль
 				Console.WriteLine( "Факториал равен " + fact );
@@ -22,6 +26,41 @@ namespace MathHelper
 				Console.WriteLine( "Максимальное четное число меньше N равно " + maxEvenNumber );
 				Console.ReadLine();
 			}
+		}
+
+		private static int GetMaxEvenNumber( int number )
+		{
+			int maxEvenNumber = 0;
+
+			for ( int i = 1; i <= number; i++ )
+			{
+				if ( i % 2 == 0 )
+				{
+					maxEvenNumber = i;
+				}
+			}
+			return maxEvenNumber;
+		}
+
+		private static int GetSummFrom1ToN( int number )
+		{
+			int summ = 0;
+
+			for ( int i = 1; i <= number; i++ )
+			{
+				summ = summ + i;
+			}
+			return summ;
+		}
+
+		private static int GetFactorial( int number )
+		{
+			int fact = 1;
+			for ( int i = 1; i <= number; i++ )
+			{
+				fact = fact * i;
+			}
+			return fact;
 		}
 
 		private static void CalculateFactorialAndSummAndMaxEventNumber( int number, out int fact, out int summ, out int maxEvenNumber )

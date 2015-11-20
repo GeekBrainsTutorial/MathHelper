@@ -10,8 +10,8 @@ namespace MathHelper
 	{
 		static void Main( string[] args )
 		{
-			Console.WriteLine( "Здравствуйте вас приветствует математическая программа" );
-			Console.WriteLine( "пажалуйста введите число." );
+			Console.WriteLine( "Здравствуйте, вас приветствует математическая программа" );
+			Console.WriteLine( "Пожалуйста, введите число." );
 			String userInput = Console.ReadLine();
 
 			if ( userInput == "q" )
@@ -34,9 +34,9 @@ namespace MathHelper
 				}
 			}
 
-			Console.WriteLine( "Фактореал равен " + fact );
+			Console.WriteLine( "Факториал равен " + fact );
 			Console.WriteLine( "Сумма от 1 до N равна " + summ );
-			Console.WriteLine( "максимальное четное число меньше N равно " + maxEvenNumber );
+			Console.WriteLine( "Максимальное четное число меньше N равно " + maxEvenNumber );
 
 
 

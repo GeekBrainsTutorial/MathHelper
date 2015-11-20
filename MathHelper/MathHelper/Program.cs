@@ -13,6 +13,7 @@ namespace MathHelper
 			int number;
 			if ( TryGetNumberFromUser( out number ) )
 			{
+				// Производим вычисления факториала, суммы от 1 до N и макимального четного числа меньше N
 				int fact = 1;
 				int summ = 0;
 				int maxEvenNumber = 0;
@@ -47,7 +48,6 @@ namespace MathHelper
 				return false;
 			}
 
-			// Производим вычисления факториала, суммы от 1 до N и макимального четного числа меньше N
 			number = Int32.Parse( userInput );
 			return true;
 		}

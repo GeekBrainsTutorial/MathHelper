@@ -13,26 +13,31 @@ namespace MathHelper
 			int number;
 			if ( TryGetNumberFromUser( out number ) )
 			{
-				// Производим вычисления факториала, суммы от 1 до N и макимального четного числа меньше N
-				int fact = 1;
-				int summ = 0;
-				int maxEvenNumber = 0;
-
-				for ( int i = 1; i <= number; i++ )
-				{
-					fact = fact * i;
-					summ = summ + i;
-					if ( i % 2 == 0 )
-					{
-						maxEvenNumber = i;
-					}
-				}
+				int fact, summ, maxEvenNumber;
+				CalculateFactorialAndSummAndMaxEventNumber( number, out fact, out summ, out maxEvenNumber );
 
 				// Выводим результаты на консоль
 				Console.WriteLine( "Факториал равен " + fact );
 				Console.WriteLine( "Сумма от 1 до N равна " + summ );
 				Console.WriteLine( "Максимальное четное число меньше N равно " + maxEvenNumber );
 				Console.ReadLine();
+			}
+		}
+
+		private static void CalculateFactorialAndSummAndMaxEventNumber( int number, out int fact, out int summ, out int maxEvenNumber )
+		{
+			fact = 1;
+			summ = 0;
+			maxEvenNumber = 0;
+
+			for ( int i = 1; i <= number; i++ )
+			{
+				fact = fact * i;
+				summ = summ + i;
+				if ( i % 2 == 0 )
+				{
+					maxEvenNumber = i;
+				}
 			}
 		}
 

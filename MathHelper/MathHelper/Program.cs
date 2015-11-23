@@ -8,6 +8,8 @@ namespace MathHelper
 {
 	class Program
 	{
+		static const string _symbolForExit = "-q";
+
 		static void Main( string[] args )
 		{
 			try
@@ -69,17 +71,17 @@ namespace MathHelper
 		private static bool TryGetNumberFromUser(out int number)
 		{
 			Console.WriteLine( "Здравствуйте, вас приветствует математическая программа" );
-			Console.WriteLine( "Пожалуйста, введите число. Для выхода введите q" );
+			Console.WriteLine( "Пожалуйста, введите число. Для выхода введите " + _symbolForExit );
 			string userInput = Console.ReadLine();
 			while(!Int32.TryParse(userInput, out number))
 			{
-				if ( userInput == "q" )
+				if ( userInput == _symbolForExit )
 				{
 					number = -1;
 					return false;
 				}
 				else
-					Console.WriteLine("Вы ввели неправильное значение. Пожалуйста, введите именно число. Для выхода нажмите q");
+					Console.WriteLine( "Вы ввели неправильное значение. Пожалуйста, введите именно число. Для выхода нажмите " + _symbolForExit );
 
 				userInput = Console.ReadLine();
 			}

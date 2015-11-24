@@ -9,6 +9,14 @@ namespace MathHelper
 	class Program
 	{
 		static const string _symbolForExit = "-q";
+		public delegate bool Condition( int number );
+		public static bool IsEven(int number)
+		{
+			if ( number % 2 == 0 )
+				return true;
+			else
+				return false;
+		}
 
 		static void Main( string[] args )
 		{
@@ -19,7 +27,7 @@ namespace MathHelper
 				{
 					int fact = GetFactorial( number );
 					int summ = GetSummFrom1ToN( number );
-					int maxEvenNumber = GetMaxEvenNumber( number );
+					int maxEvenNumber = GetMaxByCondition( number, IsEven );
 
 					Console.WriteLine( "Факториал равен " + fact );
 					Console.WriteLine( "Сумма от 1 до N равна " + summ );
@@ -33,13 +41,13 @@ namespace MathHelper
 			Console.ReadLine();
 		}
 
-		private static int GetMaxEvenNumber( int number )
+		private static int GetMaxByCondition( int number, Condition condition )
 		{
 			int maxEvenNumber = 0;
 
 			for ( int i = 1; i <= number; i++ )
 			{
-				if ( i % 2 == 0 )
+				if ( condition(i) )
 				{
 					maxEvenNumber = i;
 				}

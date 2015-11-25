@@ -10,7 +10,8 @@ namespace Admin
 	{
 		static void Main( string[] args )
 		{
-			List<Keyword> keywords = Keyword.GetKeywordsByPersonID( 1 );
+			KeywordsRepository keywordRepo = new KeywordsRepository();
+			List<Keyword> keywords = keywordRepo.GetKeywordsByPersonID( 1 );
 		}
 	}
 }

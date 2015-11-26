@@ -10,16 +10,5 @@ namespace Admin
 	{
 		public int ID { get; set; }
 		public String Name { get; set; }
-
-		public Keyword()
-		{
-
-		}
-
-		public Keyword(int id, string name)
-		{
-			ID = id;
-			name = Name;
-		}
 	}
 }

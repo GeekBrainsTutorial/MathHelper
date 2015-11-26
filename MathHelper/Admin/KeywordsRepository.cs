@@ -11,8 +11,8 @@ namespace Admin
 		public List<Keyword> GetKeywordsByPersonID( int personID )
 		{
 			List<Keyword> keywords = new List<Keyword>();
-			keywords.Add( new Keyword( 1, "Владимир Владимирович" ) );
-			keywords.Add( new Keyword( 2, "Путин" ) );
+			keywords.Add( new Keyword { ID = 1, Name = "Владимир Владимирович" } );
+			keywords.Add( new Keyword { ID = 2, Name = "Путин" } );
 			return keywords;
 		}
 	}

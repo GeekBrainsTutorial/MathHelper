@@ -8,7 +8,7 @@ namespace MathHelper
 {
 	class Program
 	{
-		static const string _symbolForExit = "-q";
+		const string _symbolForExit = "-q";
 
 		static void Main( string[] args )
 		{

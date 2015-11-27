@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Admin
 {
-	class Program
+	class KeywordViewer
 	{
-		static void Main( string[] args )
+		public void View(int personID)
 		{
 			FakeKeywordsRepository keywordRepo = new FakeKeywordsRepository();
-			List<Keyword> keywords = keywordRepo.GetKeywordsByPersonID( 1 );
+			var keywords = keywordRepo.GetKeywordsByPersonID( personID );
+			foreach(var keyword in keywords)
+			{
+				Console.WriteLine( keyword.Name );
+			}
 		}
 	}
 }

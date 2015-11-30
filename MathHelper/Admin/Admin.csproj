@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbKeywordsRepository.cs" />
     <Compile Include="Keyword.cs" />
     <Compile Include="FakeKeywordsRepository.cs" />
     <Compile Include="KeywordViewer.cs" />

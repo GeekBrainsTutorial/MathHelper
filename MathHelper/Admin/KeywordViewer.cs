@@ -8,10 +8,16 @@ namespace Admin
 {
 	class KeywordViewer
 	{
-		public void View(int personID)
+		private IKeywordsRepository _keywordRepo;
+
+		public KeywordViewer(IKeywordsRepository keywordRepo)
 		{
-			FakeKeywordsRepository keywordRepo = new FakeKeywordsRepository();
-			var keywords = keywordRepo.GetKeywordsByPersonID( personID );
+			_keywordRepo = keywordRepo;
+		}
+
+		public void View( int personID )
+		{
+			var keywords = _keywordRepo.GetKeywordsByPersonID( personID );
 			foreach(var keyword in keywords)
 			{
 				Console.WriteLine( keyword.Name );

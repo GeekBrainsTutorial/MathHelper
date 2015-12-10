@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbKeywordsRepository.cs" />
-    <Compile Include="DbSitesRepository.cs" />
-    <Compile Include="FakeSitesRepository.cs" />
-    <Compile Include="IKeywordsRepository.cs" />
-    <Compile Include="ISitesRepository.cs" />
+    <Compile Include="KeywordsRepository\DbKeywordsRepository.cs" />
+    <Compile Include="RepositoryFactory\DbRepositoryFactory.cs" />
+    <Compile Include="SitesRepository\DbSitesRepository.cs" />
+    <Compile Include="RepositoryFactory\FakeRepotoryFactory.cs" />
+    <Compile Include="SitesRepository\FakeSitesRepository.cs" />
+    <Compile Include="KeywordsRepository\IKeywordsRepository.cs" />
+    <Compile Include="RepositoryFactory\IRepositoryFactory.cs" />
+    <Compile Include="SitesRepository\ISitesRepository.cs" />
     <Compile Include="Keyword.cs" />
-    <Compile Include="FakeKeywordsRepository.cs" />
+    <Compile Include="KeywordsRepository\FakeKeywordsRepository.cs" />
     <Compile Include="KeywordViewer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

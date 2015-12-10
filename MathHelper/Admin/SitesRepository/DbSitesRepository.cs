@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Admin
 {
-	public class DbSitesRepository
+	public class DbSitesRepository : ISitesRepository
 	{		
 		public String GetSiteNameByID( int id )
 		{

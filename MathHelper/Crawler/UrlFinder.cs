@@ -9,12 +9,10 @@ namespace Crawler
 {
 	public class UrlFinder
 	{
-		String _host;
 		Downloader _downloader = new Downloader();
 		
 		public UrlFinder( String host )
 		{
-			_host = host;
 		}
 
 		public List<String> GetUrls( string url )

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +11,10 @@ namespace Crawler
 	{
 		public String Download( String url )
 		{
-			throw new NotImplementedException();
+			using(var httpClient = new HttpClient())
+			{
+				return httpClient.GetStringAsync( url ).Result;
+			}
 		}
 	}
 }

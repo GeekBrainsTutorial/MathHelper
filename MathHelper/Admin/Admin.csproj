@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="KeywordsRepository\DbKeywordsRepository.cs" />
     <Compile Include="RepositoryFactory\DbRepositoryFactory.cs" />
+    <Compile Include="Singletone\KeywordRepositorySingletone.cs" />
     <Compile Include="SitesRepository\DbSitesRepository.cs" />
     <Compile Include="RepositoryFactory\FakeRepotoryFactory.cs" />
     <Compile Include="SitesRepository\FakeSitesRepository.cs" />

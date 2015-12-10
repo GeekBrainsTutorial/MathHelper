@@ -11,7 +11,7 @@ namespace Crawler
 	{
 		Downloader _downloader = new Downloader();
 		
-		public UrlFinder( String host )
+		public UrlFinder( )
 		{
 		}
 

@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathHelper", "MathHelper\MathHelper.csproj", "{B4275BD2-06B6-469B-852F-A1536742407D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin", "Admin\Admin.csproj", "{DE81848E-E509-4F79-A368-B63A78E6AB35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crawler", "Crawler\Crawler.csproj", "{36C57D75-AAFC-4FF3-91D2-BB21500FD640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{28896E7E-BB39-4E80-8CE9-411EDDFF1D1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{DE81848E-E509-4F79-A368-B63A78E6AB35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE81848E-E509-4F79-A368-B63A78E6AB35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE81848E-E509-4F79-A368-B63A78E6AB35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36C57D75-AAFC-4FF3-91D2-BB21500FD640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C57D75-AAFC-4FF3-91D2-BB21500FD640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C57D75-AAFC-4FF3-91D2-BB21500FD640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C57D75-AAFC-4FF3-91D2-BB21500FD640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28896E7E-BB39-4E80-8CE9-411EDDFF1D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28896E7E-BB39-4E80-8CE9-411EDDFF1D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28896E7E-BB39-4E80-8CE9-411EDDFF1D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28896E7E-BB39-4E80-8CE9-411EDDFF1D1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,9 +10,7 @@ namespace Admin
 	{
 		static void Main( string[] args )
 		{
-			IRepositoryFactory repoFactory = new FakeRepotoryFactory();
-			IKeywordsRepository keywordRepo = repoFactory.GetKeywordsRepository();
-			KeywordViewer viewer = new KeywordViewer( keywordRepo );
+			KeywordViewer viewer = new KeywordViewer( KeywordRepositorySingletone.GetInstance() );
 			viewer.View(1);
 		}
 	}

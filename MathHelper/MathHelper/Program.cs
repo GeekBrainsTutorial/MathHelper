@@ -8,7 +8,7 @@ namespace MathHelper
 {
 	class Program
 	{
-		static const string _symbolForExit = "-q";
+		const string _symbolForExit = "-q";
 		public delegate bool Condition( int number );
 		public static bool IsEven(int number)
 		{

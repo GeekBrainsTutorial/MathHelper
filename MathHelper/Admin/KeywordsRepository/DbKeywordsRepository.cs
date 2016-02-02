@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Admin
 {
-	class DbKeywordsRepository : IKeywordsRepository
+	public class DbKeywordsRepository : IKeywordsRepository
 	{
 		public List<Keyword> GetKeywordsByPersonID( int personID )
 		{

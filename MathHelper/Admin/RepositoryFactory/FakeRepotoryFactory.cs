@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Admin
 {
-	class FakeRepotoryFactory : IRepositoryFactory
+	public class FakeRepotoryFactory : IRepositoryFactory
 	{
 		public ISitesRepository GetSitesRepository()
 		{

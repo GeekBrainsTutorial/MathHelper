@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Admin
 {
-	interface IKeywordsRepository
+	public interface IKeywordsRepository
 	{
 		List<Keyword> GetKeywordsByPersonID( int personID );
 	}

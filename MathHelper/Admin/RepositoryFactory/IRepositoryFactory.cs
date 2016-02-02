@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Admin
 {
-	interface IRepositoryFactory
+	public interface IRepositoryFactory
 	{
 		ISitesRepository GetSitesRepository();
 

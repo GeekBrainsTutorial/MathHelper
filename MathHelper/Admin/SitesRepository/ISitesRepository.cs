@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Admin
 {
-	interface ISitesRepository
+	public interface ISitesRepository
 	{
 		String GetSiteNameByID( int id );
 	}

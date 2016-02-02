@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Autofac;
 
 namespace Admin
 {
@@ -10,10 +11,18 @@ namespace Admin
 	{
 		static void Main( string[] args )
 		{
-			IRepositoryFactory repoFactory = new FakeRepotoryFactory();
-			IKeywordsRepository keywordRepo = repoFactory.GetKeywordsRepository();
+			var container = RegisterDIContainer();
+			IKeywordsRepository keywordRepo = container.Resolve<IKeywordsRepository>();
 			KeywordViewer viewer = new KeywordViewer( keywordRepo );
 			viewer.View(1);
 		}
+
+		private static IContainer RegisterDIContainer()
+		{
+			var builder = new ContainerBuilder();
+			builder.RegisterType<FakeKeywordsRepository>().As<IKeywordsRepository>();
+			return builder.Build();
+		}
+
 	}
 }
